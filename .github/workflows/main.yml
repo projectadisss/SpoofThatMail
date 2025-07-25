@@ -1,0 +1,26 @@
+            - name: stackql-exec
+  # You may pin to the exact commit or the version.
+  # uses: stackql/stackql-exec@cf3a7d7bf8dabb7ffee872b7d3f6857a57b8a13d
+  uses: stackql/stackql-exec@v2.2.3
+  with:
+    # stackql query to be executed
+    query: # optional
+    # stackql query file to be executed
+    query_file_path: # optional
+    # jsonnet or json data file to be passed to query preprocessor
+    data_file_path: # optional
+    # set to true to print the query that would be executed without actually executing it (default is false)
+    dry_run: # optional, default is false
+    # comma delimited list of vars to be passed to query preprocessor (supported with jsonnet config blocks or jsonnet data files only)
+    vars: # optional
+    # output format for queries (ignored is `is_command` is `true`), supported formats include `json` (default), `csv`, `table` and `text`
+    query_output: # optional, default is json
+    # file path to json object of stackql auth, not required if using standard provider authentication environment variables
+    auth_obj_path: # optional
+    # json string of stackql auth, not required if using standard provider authentication environment variables
+    auth_str: # optional
+    # Set to true if the stackql execution is a command that does not return data
+    is_command: # optional, default is false
+    # behavior on a failure in query, supported values are `exit` (default) and `continue`
+    on_failure: # optional, default is exit
+          
